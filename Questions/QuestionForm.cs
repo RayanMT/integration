@@ -17,9 +17,6 @@ namespace PROJECT
             InitializeComponent();
             InitializeDropdowns();
             comboQuestionType.SelectedIndexChanged += comboQuestionType_SelectedIndexChanged;
-
-            btnNext.Visible = true;
-            btnPrev.Visible = true;
             btnSaveEdit.Visible = false;
         }
 

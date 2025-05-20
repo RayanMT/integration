@@ -26,8 +26,6 @@
             this.comboDifficulty = new System.Windows.Forms.ComboBox();
             this.btnAddQuestion = new System.Windows.Forms.Button();
             this.btnSaveEdit = new System.Windows.Forms.Button();
-            this.btnNext = new System.Windows.Forms.Button();
-            this.btnPrev = new System.Windows.Forms.Button();
             this.SuspendLayout();
 
             // txtQuestion
@@ -92,21 +90,7 @@
             this.btnSaveEdit.Visible = false;
             this.btnSaveEdit.Click += new System.EventHandler(this.btnSaveEdit_Click);
 
-            // btnNext
-            this.btnNext.Location = new System.Drawing.Point(310, 300);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(100, 40);
-            this.btnNext.Text = "Next →";
-            this.btnNext.UseVisualStyleBackColor = true;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-
-            // btnPrev
-            this.btnPrev.Location = new System.Drawing.Point(60, 300);
-            this.btnPrev.Name = "btnPrev";
-            this.btnPrev.Size = new System.Drawing.Size(100, 40);
-            this.btnPrev.Text = "← Prev";
-            this.btnPrev.UseVisualStyleBackColor = true;
-            this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
+            
 
             // QuestionForm
             this.ClientSize = new System.Drawing.Size(540, 370);
@@ -121,8 +105,6 @@
             this.Controls.Add(this.comboDifficulty);
             this.Controls.Add(this.btnAddQuestion);
             this.Controls.Add(this.btnSaveEdit);
-            this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.btnPrev);
             this.Name = "QuestionForm";
             this.Text = "Add/Edit Question";
             this.ResumeLayout(false);
@@ -141,8 +123,6 @@
         private System.Windows.Forms.ComboBox comboCategory;
         private System.Windows.Forms.ComboBox comboDifficulty;
         private System.Windows.Forms.Button btnAddQuestion;
-        private System.Windows.Forms.Button btnNext;
-        private System.Windows.Forms.Button btnPrev;
         private System.Windows.Forms.Button btnSaveEdit;
     }
 }

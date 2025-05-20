@@ -41,7 +41,7 @@ namespace PROJECT
                 .Take(4)
                 .ToList();
 
-            if (questions.Count < 4)
+            if (questions.Count < 2)
             {
                 MessageBox.Show("Not enough questions for this difficulty and course.");
                 this.Close();
