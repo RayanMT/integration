@@ -2,15 +2,8 @@
 {
     partial class StudentMainForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,10 +15,6 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
@@ -34,9 +23,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // button1 (Test Execution)
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(128, 255, 255);
             this.button1.Location = new System.Drawing.Point(416, 242);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
@@ -46,7 +35,7 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // button2 (Grade History)
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button2.Location = new System.Drawing.Point(416, 386);
@@ -58,7 +47,7 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // button3 (Unused / Optional)
             // 
             this.button3.Location = new System.Drawing.Point(0, 0);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -66,7 +55,7 @@
             this.button3.Size = new System.Drawing.Size(112, 36);
             this.button3.TabIndex = 4;
             // 
-            // button4
+            // button4 (Exit)
             // 
             this.button4.BackColor = System.Drawing.Color.Red;
             this.button4.Location = new System.Drawing.Point(523, 532);
@@ -95,7 +84,6 @@
             this.Text = "StudentMainForm";
             this.Load += new System.EventHandler(this.StudentMainForm_Load);
             this.ResumeLayout(false);
-
         }
 
         #endregion

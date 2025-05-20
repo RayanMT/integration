@@ -9,7 +9,6 @@ namespace PROJECT
     public partial class QuestionForm : Form
     {
         private List<Question> questions = QuestionRepository.AllQuestions;
-
         private bool isEditMode = false;
         private int editIndex = -1;
 
@@ -18,14 +17,14 @@ namespace PROJECT
             InitializeComponent();
             InitializeDropdowns();
             comboQuestionType.SelectedIndexChanged += comboQuestionType_SelectedIndexChanged;
+
+            btnNext.Visible = true;
+            btnPrev.Visible = true;
+            btnSaveEdit.Visible = false;
         }
 
-        public QuestionForm(Question q, int index)
+        public QuestionForm(Question q, int index) : this()
         {
-            InitializeComponent();
-            InitializeDropdowns();
-            comboQuestionType.SelectedIndexChanged += comboQuestionType_SelectedIndexChanged;
-
             isEditMode = true;
             editIndex = index;
 
@@ -40,13 +39,7 @@ namespace PROJECT
             comboDifficulty.SelectedItem = q.Difficulty;
 
             btnAddQuestion.Visible = false;
-
-            Button btnSaveEdit = new Button();
-            btnSaveEdit.Text = "Save Edit";
-            btnSaveEdit.Location = new System.Drawing.Point(160, 300);
-            btnSaveEdit.Size = new System.Drawing.Size(150, 40);
-            btnSaveEdit.Click += new EventHandler(this.btnSaveEdit_Click);
-            this.Controls.Add(btnSaveEdit);
+            btnSaveEdit.Visible = true;
         }
 
         private void InitializeDropdowns()
@@ -99,8 +92,7 @@ namespace PROJECT
 
         private void btnAddQuestion_Click(object sender, EventArgs e)
         {
-            if (!ValidateInputs(out Question q))
-                return;
+            if (!ValidateInputs(out Question q)) return;
 
             questions.Add(q);
             QuestionRepository.SaveToExcel();
@@ -111,8 +103,7 @@ namespace PROJECT
 
         private void btnSaveEdit_Click(object sender, EventArgs e)
         {
-            if (!ValidateInputs(out Question updated))
-                return;
+            if (!ValidateInputs(out Question updated)) return;
 
             if (editIndex >= 0 && editIndex < questions.Count)
             {
@@ -206,6 +197,16 @@ namespace PROJECT
             comboCategory.SelectedIndex = 0;
             comboDifficulty.SelectedIndex = 0;
             comboQuestionType.SelectedIndex = 0;
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Next clicked!");
+        }
+
+        private void btnPrev_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Prev clicked!");
         }
     }
 }

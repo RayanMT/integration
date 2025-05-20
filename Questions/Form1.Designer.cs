@@ -24,6 +24,7 @@ namespace PROJECT
 
         private void InitializeComponent()
         {
+
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();

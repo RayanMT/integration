@@ -27,25 +27,25 @@ namespace PROJECT
             this.ControlBox = true;
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
-            // Example: open a new practice form or show a message
-            MessageBox.Show("Welcome to Test execution!", "Test execution", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            // Example: opening a new form named PracticeForm
-            // PracticeForm practiceForm = new PracticeForm();
-            // practiceForm.Show();
+            this.Hide();
+            var examForm = new ExamForm();
+            examForm.FormClosed += (s, args) => this.Show();
+            examForm.Show();
         }
+
+
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // Display grade history using a MessageBox or open a dedicated form
-            MessageBox.Show("Your grade history will be displayed here.", "Grade History", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            // Example, if you have a form named GradesHistoryForm:
-            // GradesHistoryForm historyForm = new GradesHistoryForm();
-            // historyForm.Show();
+            this.Hide();
+            GradeTracker gradeForm = new GradeTracker();
+            gradeForm.FormClosed += (s, args) => this.Show(); // So it goes back to this form when closed
+            gradeForm.Show();
         }
+
 
         private void button4_Click(object sender, EventArgs e)
         {
